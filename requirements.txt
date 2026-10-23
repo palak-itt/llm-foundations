@@ -1,0 +1,10 @@
+ollama
+anthropic
+tiktoken
+transformers
+torch
+numpy
+matplotlib
+python-dotenv
+scikit-learn
+openai
