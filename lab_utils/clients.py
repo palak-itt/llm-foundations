@@ -54,11 +54,11 @@ def ask_local(prompt, **options):
     """
     import ollama
     t0=time.time()
-    r = ollama.chat(model=OLLAMA_MODEL, messages = [{"role": "user", "content":prompt}, {"role": "user", "content": "Give the tokens you split this message into"}], options=options)
+    r = ollama.chat(model=OLLAMA_MODEL, messages = [{"role": "user", "content":prompt}], options=options)
     dt = time.time() - t0
     usage = {"input_tokens": r.get("prompt_eval_count"),
              "output_tokens": r.get("eval_count")}
-    print(r)
+    # print(r)
     return r["message"]["content"], usage, dt
 
 def ask_gpt(prompt, **options):
@@ -81,10 +81,10 @@ def ask_gpt(prompt, **options):
 
     resp = client.chat.completions.create(
         model=model,
-        messages=[ {"role": "user", "content": "What it takes to have discipline like SUnit Chettri or Virat kohli"}, {"role": "system", "content": prompt}],
+        messages=[{"role": "user", "content": prompt}],
         **options,
     )
     dt = time.time() - t0
     usage = {"input_tokens": resp.usage.prompt_tokens, "output_tokens": resp.usage.completion_tokens}
-    print(resp)
+    # print(resp)
     return resp.choices[0].message.content, usage, dt
