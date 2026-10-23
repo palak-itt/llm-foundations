@@ -15,7 +15,7 @@
     - ``` model='llama3.2:3b' created_at='2026-10-23T03:47:33.4992688Z' done=True done_reason='stop' total_duration=12241768900 load_duration=6147830900 prompt_eval_count=41 prompt_eval_duration=738765000 eval_count=50 eval_duration=5342754000 message=Message(role='assistant', content='In the context of Large Language Models (LLMs), a token refers to a discrete unit of text, such as a word, character, or subword, that is used as the basic building block for input, output, and model processing.', thinking=None, images=None, tool_name=None, tool_calls=None) logprobs=None ```
 
 - [How Github manages multiple local accounts?](https://medium.com/expedia-group-tech/how-to-handle-multiple-git-accounts-385afe430d5a)
-    - GPG Signing keys, when commit suing them and making sgssign=true, others cannit use your identiyt to push commits. We make this by anbling branch protection. If the commits are signed - github shows verfied. By default web UI are already verified ones. 
+    - GPG Signing keys, when commit using them and making gpgsign=true, others cannot use your identity to push commits. We make this by enabling branch protection. If the commits are signed - github shows verfied. By default web UI are already verified ones. 
     - There is `git config --local --list --show-origin`
     - `git config --system --list --show-origin`
     - `git config --global --list --show-origin`
