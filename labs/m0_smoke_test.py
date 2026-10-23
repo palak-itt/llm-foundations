@@ -2,7 +2,7 @@ from lab_utils.clients import ask_claude, ask_local, ask_gpt
 import time
 
 
-q = "In one sentence, what is a token in the context of LLMs?"
+q = "Can you explain a relevant software engineer who is FAANG level?"
 
 # text, usage, dt = ask_claude(q)
 # print("Claude response:", text)
